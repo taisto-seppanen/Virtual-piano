@@ -1,0 +1,77 @@
+body {
+  padding-top: 100px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+}
+
+.playGround {
+  background: center;
+  background-image: url(./background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  height: 780px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.playGroundWrapper {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0;
+  margin: 0;
+  height: 780px;
+}
+
+.fullSreenButton {
+  background-color: brown;
+  border-radius: 10px;
+  width: 100px;
+  height: 50px;
+  margin-top: 150px;
+}
+.fullSreenButton:hover {
+  background-color: crimson;
+}
+
+.fakebtn_sharp {
+  border: 1px solid gray;
+  margin-top: 25px;
+  display: inline-block;
+  width: 100px;
+  height: 150px;
+  background-color: black;
+  text-align: center;
+  font-size: 22px;
+  color: white;
+  transition: transform 1s;
+}
+
+.fakebtn_sharp:hover {
+  background-color: gray;
+}
+
+.fakebtn_sharp:active {
+  background-color: red;
+}
+
+.fakebtn {
+  margin-top: 25px;
+
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  text-align: center;
+  font-size: 22px;
+  color: black;
+}
+
+.fakebtn:hover {
+  background-color: rgb(128, 125, 125);
+}
+
+.fakebtn:active {
+  background-color: red;
+}
