@@ -1,118 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="shortcut icon" href="#" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="/style.css" />
+    <link href="assets/piano.ico" rel="shortcut icon" />
+
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Open+Sans:wght@300;400;800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+
+    <title>virtual-piano</title>
   </head>
-  <section class="playGround">
-    <div class="playGroundWrapper">
-      <div
-        id="81"
-        class="fakebtn_sharp"
-        onmouseenter="mousePlay(event, 81)"
-        onclick="playKey(81)"
-      >
-        A#
-      </div>
 
-      <div
-        id="btn_note_c_sharp"
-        class="fakebtn_sharp"
-        onmouseenter="mousePlay(event, 87)"
-        onclick="playKey(87)"
-      >
-        C#
+  <body>
+    <header class="header">
+      <h1 class="header-title">Virtual Piano</h1>
+    </header>
+    <main class="main">
+      <div class="btn-container">
+        <button
+          onclick="keyViewMode()"
+          id="notesBtn"
+          class="btn btn-notes btn-active"
+        >
+          Notes
+        </button>
+        <button onclick="keyViewMode()" id="lettersBtn" class="btn btn-letters">
+          Letters
+        </button>
       </div>
-
-      <div
-        id="btn_note_d_sharp"
-        class="fakebtn_sharp"
-        onmouseenter="mousePlay(event, 69)"
-        onclick="playKey(69)"
-      >
-        D#
+      <div class="piano">
+        <div id="65" class="piano-key" data-letter="D" data-note="c"></div>
+        <div id="83" class="piano-key" data-letter="F" data-note="d"></div>
+        <div id="68" class="piano-key" data-letter="G" data-note="e"></div>
+        <div id="70" class="piano-key" data-letter="H" data-note="f"></div>
+        <div id="71" class="piano-key" data-letter="J" data-note="g"></div>
+        <div id="72" class="piano-key" data-letter="K" data-note="a"></div>
+        <div id="74" class="piano-key" data-letter="L" data-note="b"></div>
+        <div class="keys-sharp">
+          <div
+            id="81"
+            class="piano-key sharp"
+            data-letter="R"
+            data-note="c♯"
+          ></div>
+          <div
+            id="87"
+            class="piano-key sharp"
+            data-letter="T"
+            data-note="d♯"
+          ></div>
+          <div class="piano-key sharp none"></div>
+          <div
+            id="69"
+            class="piano-key sharp"
+            data-letter="U"
+            data-note="f♯"
+          ></div>
+          <div
+            id="82"
+            class="piano-key sharp"
+            data-letter="I"
+            data-note="g♯"
+          ></div>
+          <div
+            id="84"
+            class="piano-key sharp"
+            data-letter="O"
+            data-note="a♯"
+          ></div>
+        </div>
       </div>
-
-      <div
-        id="btn_note_f_sharp"
-        class="fakebtn_sharp"
-        onmouseenter="mousePlay(event, 82)"
-        onclick="playKey(82)"
-      >
-        F#
-      </div>
-
-      <div
-        id="btn_note_g_sharp"
-        class="fakebtn_sharp"
-        onmouseenter="mousePlay(event, 84)"
-        onclick="playKey(84)"
-      >
-        G#
-      </div>
-      <br />
-
-      <div
-        id="btn_note_a"
-        class="fakebtn"
-        onmouseenter="mousePlay(event, 65)"
-        onclick="playKey(65)"
-      >
-        A
-      </div>
-      <div
-        id="btn_note_b"
-        class="fakebtn"
-        onmouseenter="mousePlay(event, 83)"
-        onclick="playKey(83)"
-      >
-        B
-      </div>
-      <div
-        id="btn_note_c"
-        class="fakebtn"
-        onmouseenter="mousePlay(event, 68)"
-        onclick="playKey(68)"
-      >
-        C
-      </div>
-      <div
-        id="btn_note_e"
-        class="fakebtn"
-        onmouseenter="mousePlay(event, 70)"
-        onclick="playKey(70)"
-      >
-        E
-      </div>
-      <div
-        id="btn_note_f"
-        class="fakebtn"
-        onmouseenter="mousePlay(event, 71)"
-        onclick="playKey(71)"
-      >
-        F
-      </div>
-      <div
-        id="btn_note_g"
-        class="fakebtn"
-        onmouseenter="mousePlay(event, 72)"
-        onclick="playKey(72)"
-      >
-        G
-      </div>
-      <br />
       <button
-        id="fullSreenButton"
-        class="fullSreenButton"
         onclick="fullSreenButtonOn()"
-      >
-        FULL SCREEN
-      </button>
-      <script src="/script.js"></script>
-    </div>
-  </section>
+        id="fullSreenButton"
+        class="fullscreen openfullscreen"
+      ></button>
+    </main>
+    <footer class="footer">
+      <div class="footer-container">
+        <a class="github" href="#" target="_blank" rel="noopener noreferrer"
+          >github</a
+        >
+        <a
+          class="rss"
+          href="https://rs.school/js/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="rss-year">'21</span>
+        </a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
