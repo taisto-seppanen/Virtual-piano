@@ -137,12 +137,29 @@ function fullSreenButtonOn() {
   }
 }
 
-function keyViewMode() {
-  console.log(pianoKeys);
-  for (let key of pianoKeys) {
-    console.log(key.classList);
-    // key.classList.replace;                //dot elements or wut?
+const ViewModeNotes = document.querySelector(".btn-notes");
+
+ViewModeNotes.addEventListener("click", (event) => {
+  if (ViewModeletter.classList.contains("btn-active")) {
+    ViewModeletter.classList.remove("btn-active");
+    ViewModeNotes.classList.add("btn-active");
+    for (let i of pianoKeys) {
+      i.classList.remove("piano-key-letter");
+    }
   }
-  document.getElementById("notesBtn").classList.toggle("btn-active");
-  document.getElementById("lettersBtn").classList.toggle("btn-active");
-}
+});
+
+const ViewModeletter = document.querySelector(".btn-letters");
+
+ViewModeletter.addEventListener("click", (event) => {
+  if (ViewModeNotes.classList.contains("btn-active")) {
+    ViewModeNotes.classList.remove("btn-active");
+    ViewModeletter.classList.add("btn-active");
+  }
+
+  for (let i of pianoKeys) {
+    if (!i.classList.contains("piano-key-letter")) {
+      i.classList.add("piano-key-letter");
+    }
+  }
+});
